@@ -64,6 +64,12 @@ likely need a refresh — see
 The current selectors and two-phase "load fully, then harvest once" approach were
 verified against YouTube's 2026 layout.
 
+## Example Output
+
+<img width="791" height="739" alt="Screenshot 2026-06-25 at 6 40 07 pm" src="https://github.com/user-attachments/assets/d5f061cf-0b2b-45d8-97ab-ae93dbb23b6c" />
+
+**Figure: screenshot of example watch history run against the rule**
+
 ## License
 
 [MIT](LICENSE) © SSW Consulting Pty Ltd.
