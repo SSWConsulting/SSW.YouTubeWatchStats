@@ -26,7 +26,7 @@ The skill itself lives in [`youtube-watch-stats/`](youtube-watch-stats/). See it
 
 In any harness that supports Agent Skills, install the skill (below) and just ask:
 
-> "analyze my YouTube watch history" · "what kind of YouTube viewer am I?"
+> Analyze my YouTube watch history from the past 30 days. Categorize what I watched, summarize my main interests, and include key stats like video count, video length, watch time, viewing patterns, etc.
 
 ### Install
 
