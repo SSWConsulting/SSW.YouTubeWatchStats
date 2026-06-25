@@ -1,0 +1,50 @@
+{
+  "heavy-dev": {
+    "total": 26,
+    "dev": 21,
+    "dev_pct": 80.8,
+    "non_dev": 5,
+    "shorts": 2,
+    "styles": {
+      "tutorial": 6,
+      "course": 3,
+      "personality": 6,
+      "podcast": 1,
+      "talk": 2,
+      "live": 2,
+      "news": 2,
+      "music": 1,
+      "shorts": 2,
+      "entertainment": 1
+    }
+  },
+  "casual-mixed": {
+    "total": 20,
+    "dev": 2,
+    "dev_pct": 10.0,
+    "non_dev": 18,
+    "shorts": 3,
+    "styles": {
+      "music": 2,
+      "entertainment": 4,
+      "personality": 4,
+      "news": 2,
+      "tutorial": 4,
+      "podcast": 1,
+      "shorts": 3
+    }
+  },
+  "shorts-heavy": {
+    "total": 43,
+    "dev": 22,
+    "dev_pct": 51.2,
+    "non_dev": 21,
+    "shorts": 40,
+    "styles": {
+      "shorts": 40,
+      "course": 1,
+      "podcast": 1,
+      "live": 1
+    }
+  }
+}

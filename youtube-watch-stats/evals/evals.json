@@ -1,0 +1,49 @@
+{
+  "skill_name": "youtube-watch-stats",
+  "notes": "Each eval provides an already-scraped history.json so we test the analysis/report stage (the judgment-heavy part). The Playwright scraping stage is verified manually since it needs real logged-in YouTube data. Ground truth for assertions lives in fixtures/_truth.json.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "heavy-dev-viewer",
+      "prompt": "I already pulled my YouTube watch history into history.json in this folder. Analyze it and tell me what kind of YouTube viewer I am — especially how much developer/technical stuff I watch and what style it is. Write it to stats-report.md.",
+      "expected_output": "stats-report.md identifying a heavy developer viewer (~80% dev), dominated by tutorials/personality/talks/podcasts, with topic + channel + estimated watch-time breakdowns and the watch-time-is-an-estimate caveat.",
+      "files": ["fixtures/heavy-dev.json"],
+      "assertions": [
+        {"text": "Produces a stats-report.md file"},
+        {"text": "Identifies the developer/technical share as roughly 80% (accept 70-90%)"},
+        {"text": "Reports a video-style breakdown including at least tutorial and podcast/long-form styles"},
+        {"text": "Lists top channels (e.g. names real channels like Fireship, ThePrimeagen, Tsoding)"},
+        {"text": "Gives watch-time figures and explicitly labels them as estimates based on video length, not actual watch time"},
+        {"text": "Includes a 'what kind of viewer are you' style summary that is specific, not generic"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "casual-non-dev-viewer",
+      "prompt": "can you look at my youtube history (it's in history.json here) and break down what i watch? curious if i actually watch much techy/dev content or if it's mostly other stuff. save the writeup as stats-report.md",
+      "expected_output": "stats-report.md identifying a mostly non-developer viewer (~10% dev), dominated by music/entertainment/personality/podcast, correctly NOT overstating the dev share.",
+      "files": ["fixtures/casual-mixed.json"],
+      "assertions": [
+        {"text": "Produces a stats-report.md file"},
+        {"text": "Identifies the developer/technical share as low, roughly 10% (accept 5-20%)"},
+        {"text": "Does NOT mislabel music/vlog/entertainment videos as developer content"},
+        {"text": "Surfaces the dominant non-dev topics/styles (music, entertainment, personality, podcast)"},
+        {"text": "Watch-time figures are present and labelled as estimates"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "shorts-heavy-viewer",
+      "prompt": "Analyze my last 30 days of YouTube from history.json in this directory. I feel like I doomscroll Shorts way too much — is that true? Put the report in stats-report.md.",
+      "expected_output": "stats-report.md that flags Shorts dominate video COUNT (~40 of 43) but contribute little estimated TIME vs the few long-form videos, separating counts from time so the picture isn't misleading.",
+      "files": ["fixtures/shorts-heavy.json"],
+      "assertions": [
+        {"text": "Produces a stats-report.md file"},
+        {"text": "Reports that Shorts make up the large majority of videos by count (~40 of 43, accept 'most'/'90%+')"},
+        {"text": "Explicitly distinguishes video count from estimated watch time, noting Shorts inflate counts but add little time relative to the long-form videos"},
+        {"text": "Does not present estimated watch time as exact/actual watched seconds"},
+        {"text": "Gives a direct answer to the user's 'do I doomscroll Shorts' question"}
+      ]
+    }
+  ]
+}

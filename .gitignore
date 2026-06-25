@@ -1,0 +1,16 @@
+# Never commit a user's captured data or browser session
+*-profile/
+yt-profile/
+*.history.json
+history.json
+raw.json
+raw.jsonl
+stats-report.md
+
+# Build / packaging artifacts
+*.skill
+.playwright-cli/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store

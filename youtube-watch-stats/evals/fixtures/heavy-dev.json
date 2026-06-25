@@ -1,0 +1,236 @@
+[
+  {
+    "title": "Build a REST API in Rust with Axum \u2014 full tutorial",
+    "channel": "Let's Get Rusty",
+    "url": "https://www.youtube.com/watch?v=25624738826",
+    "duration_seconds": 2640,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-23"
+  },
+  {
+    "title": "Async Rust explained from scratch",
+    "channel": "Jon Gjengset",
+    "url": "https://www.youtube.com/watch?v=80058479841",
+    "duration_seconds": 5400,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-22"
+  },
+  {
+    "title": "System Design Interview: Design a URL shortener",
+    "channel": "ByteByteGo",
+    "url": "https://www.youtube.com/watch?v=22478685355",
+    "duration_seconds": 1500,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-22"
+  },
+  {
+    "title": "React Server Components, fully explained",
+    "channel": "Theo - t3.gg",
+    "url": "https://www.youtube.com/watch?v=70117142009",
+    "duration_seconds": 2100,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-21"
+  },
+  {
+    "title": "I quit my $400k FAANG job \u2014 here's why",
+    "channel": "ThePrimeagen",
+    "url": "https://www.youtube.com/watch?v=65046748751",
+    "duration_seconds": 1320,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-21"
+  },
+  {
+    "title": "Lex Fridman: Programming, AI and the future with John Carmack",
+    "channel": "Lex Fridman",
+    "url": "https://www.youtube.com/watch?v=20872857604",
+    "duration_seconds": 18000,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-20"
+  },
+  {
+    "title": "GOTO 2023 \u2022 Functional Core, Imperative Shell",
+    "channel": "GOTO Conferences",
+    "url": "https://www.youtube.com/watch?v=52852720661",
+    "duration_seconds": 2700,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-19"
+  },
+  {
+    "title": "Live coding: building a terminal text editor in C",
+    "channel": "Tsoding Daily",
+    "url": "https://www.youtube.com/watch?v=23407282421",
+    "duration_seconds": 7200,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-18"
+  },
+  {
+    "title": "Kubernetes networking deep dive",
+    "channel": "TechWorld with Nana",
+    "url": "https://www.youtube.com/watch?v=9548872086",
+    "duration_seconds": 1980,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-17"
+  },
+  {
+    "title": "Why I switched from VSCode to Neovim",
+    "channel": "Josean Martinez",
+    "url": "https://www.youtube.com/watch?v=56494336216",
+    "duration_seconds": 1140,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-16"
+  },
+  {
+    "title": "Postgres performance tuning crash course",
+    "channel": "Hussein Nasser",
+    "url": "https://www.youtube.com/watch?v=10689720701",
+    "duration_seconds": 2280,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-15"
+  },
+  {
+    "title": "The Rust programming language \u2014 conference keynote",
+    "channel": "RustConf",
+    "url": "https://www.youtube.com/watch?v=61677718201",
+    "duration_seconds": 3300,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-14"
+  },
+  {
+    "title": "AI agents are eating software \u2014 what engineers should know",
+    "channel": "Fireship",
+    "url": "https://www.youtube.com/watch?v=47394417519",
+    "duration_seconds": 480,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-13"
+  },
+  {
+    "title": "Docker in 100 seconds",
+    "channel": "Fireship",
+    "url": "https://www.youtube.com/watch?v=4221084583",
+    "duration_seconds": 130,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-13"
+  },
+  {
+    "title": "Debugging a memory leak live",
+    "channel": "Tsoding Daily",
+    "url": "https://www.youtube.com/watch?v=19160781498",
+    "duration_seconds": 4200,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-11"
+  },
+  {
+    "title": "My honest review of the M4 MacBook Pro",
+    "channel": "MKBHD",
+    "url": "https://www.youtube.com/watch?v=59664105796",
+    "duration_seconds": 900,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-10"
+  },
+  {
+    "title": "Lofi hip hop radio \u2014 beats to code to",
+    "channel": "Lofi Girl",
+    "url": "https://www.youtube.com/watch?v=6039882334",
+    "duration_seconds": 3600,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-09"
+  },
+  {
+    "title": "How I take notes as a senior engineer",
+    "channel": "Continuous Delivery",
+    "url": "https://www.youtube.com/watch?v=55620066437",
+    "duration_seconds": 1020,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-08"
+  },
+  {
+    "title": "Quick git rebase tip",
+    "channel": "The Coding Train",
+    "url": "https://www.youtube.com/watch?v=25728971822",
+    "duration_seconds": null,
+    "is_short": true,
+    "section": "",
+    "watched_date": "2026-06-07"
+  },
+  {
+    "title": "POV: your tests pass on the first try",
+    "channel": "ThePrimeagen",
+    "url": "https://www.youtube.com/watch?v=97468091112",
+    "duration_seconds": null,
+    "is_short": true,
+    "section": "",
+    "watched_date": "2026-06-07"
+  },
+  {
+    "title": "Grand strategy: my favorite city builder",
+    "channel": "Let's Game It Out",
+    "url": "https://www.youtube.com/watch?v=47457446925",
+    "duration_seconds": 1500,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-05"
+  },
+  {
+    "title": "Marathon training week 3 vlog",
+    "channel": "Nick Bare",
+    "url": "https://www.youtube.com/watch?v=21223572273",
+    "duration_seconds": 1080,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-03"
+  },
+  {
+    "title": "TypeScript generics, the parts that confuse everyone",
+    "channel": "Matt Pocock",
+    "url": "https://www.youtube.com/watch?v=29870163547",
+    "duration_seconds": 720,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-06-01"
+  },
+  {
+    "title": "Designing data-intensive applications \u2014 chapter walkthrough",
+    "channel": "ByteByteGo",
+    "url": "https://www.youtube.com/watch?v=21204009035",
+    "duration_seconds": 1620,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-05-30"
+  },
+  {
+    "title": "Weekly JS news: what shipped this week",
+    "channel": "Syntax",
+    "url": "https://www.youtube.com/watch?v=39189893357",
+    "duration_seconds": 2400,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-05-28"
+  },
+  {
+    "title": "3 espresso recipes for better mornings",
+    "channel": "James Hoffmann",
+    "url": "https://www.youtube.com/watch?v=6192521306",
+    "duration_seconds": 660,
+    "is_short": false,
+    "section": "",
+    "watched_date": "2026-05-26"
+  }
+]
