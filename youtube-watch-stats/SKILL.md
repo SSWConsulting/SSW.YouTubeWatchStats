@@ -219,6 +219,20 @@ classify. Cover:
   livestreams, "focus" playlists left running) can dominate the total and mislead
   — surface the total *and* the total minus the top 2–4 outliers, and flag likely
   background-audio items.
+- **Viewing patterns** — derive these straight from the data (no extra scraping):
+  - **Rewatches** — videos that appear more than once in the window. Count
+    repeated video URLs in `history.json`; list the top few rewatched titles with
+    channel/what-they-are. (This catches cross-day rewatches; same-day repeats are
+    de-duped, so note it's a floor, not exact.)
+  - **Rhythm** — the **busiest day** (most videos) and roughly how many of the
+    covered days were active vs idle. A rough daily-volume sketch is fine.
+  - **Channel concentration** — is viewing concentrated in a handful of channels
+    or spread thin across many? (e.g. "top 5 channels = 40% of views" vs "90
+    channels, no repeats"). It says a lot about whether they follow creators or
+    graze the algorithm.
+  Classify content **by judgment** (title + channel + what you know), never by a
+  fixed keyword table — hardcoded keyword lists overfit to one person's history
+  and fail for everyone else.
 - **"What kind of viewer are you"** — a short, specific, human paragraph that
   synthesizes the above into a recognizable portrait. This is the part the user
   actually remembers; make it sharp and a little fun, grounded in the numbers.
@@ -253,7 +267,10 @@ Top dev channels. What it all says about how they learn/stay current.>
 
 ## Top channels
 <ranked by video count; note Shorts carry no channel, so this is long-form only;
-flag any own/work channels.>
+flag any own/work channels; note channel concentration (few-channels vs spread).>
+
+## Viewing patterns
+<busiest day + active-vs-idle days; most-rewatched videos with context.>
 
 ## Watch time (estimated)
 <total / daily avg / avg length / shorts vs long-form — labelled as estimates;
