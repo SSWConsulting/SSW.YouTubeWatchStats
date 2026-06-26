@@ -5,6 +5,13 @@ browser) and writes a `stats-report.md` focused on **developer-themed watching
 behaviour** — how much dev/technical content you watch and what *kind* — plus
 topics, channels, and watch-time estimates.
 
+> ⚠️ **What it accesses:** this skill reads your **private YouTube watch history**
+> through your **logged-in Google/YouTube account**. It opens a browser, asks you
+> to sign in once, and reads your watch-history page (video titles, channels,
+> dates). Everything stays **on your machine** — your history and login are never
+> uploaded anywhere. The skill asks for your go-ahead before opening the browser,
+> and you do the sign-in yourself. See [Privacy](#privacy) below.
+
 A "skill" is just this folder: `SKILL.md` + `scripts/` + `references/`. How you
 install it depends on your harness.
 
@@ -42,9 +49,11 @@ GitHub Release. Plain `zip -r youtube-watch-stats.zip youtube-watch-stats` works
 too for harnesses that accept a zip.
 
 ## Usage
-Just ask: *"analyze my YouTube watch history"* / *"what kind of YouTube viewer am
-I?"*. First run opens a browser and asks you to sign into YouTube once; later runs
-reuse that login.
+Ask for an analysis of **your own watch history**, e.g. *"analyze my YouTube
+watch history"*, *"break down what I've watched on YouTube this month"*, or
+*"how much dev content do I actually watch?"*. The skill confirms before it
+starts; the first run opens a browser and asks you to sign into YouTube once,
+and later runs reuse that login.
 
 ## Notes
 - Watch-time figures are **estimates from video length**, not actual seconds.

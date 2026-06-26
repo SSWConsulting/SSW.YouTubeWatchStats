@@ -2,11 +2,13 @@
 name: youtube-watch-stats
 description: >-
   Scrape and analyze the user's YouTube watch history into a personal stats report
-  focused on developer-themed watching behaviour. Use whenever the user wants to
-  understand their YouTube habits — e.g. "analyze my youtube history", "what do I
-  watch on youtube", "how much developer/technical content do I watch", "am I
-  watching too many shorts", "what kind of youtube viewer am I", "break down my
-  youtube by topic / channel / video style", or "youtube watch-time stats". Sets up
+  focused on developer-themed watching behaviour. Use when the user asks to
+  analyze their own YouTube **watch history** / viewing stats — e.g. "analyze my
+  youtube watch history", "how much developer/technical content do I watch", "am
+  I watching too many shorts", "what kind of youtube viewer am I", "break down my
+  youtube history by topic / channel / video style", or "my youtube watch-time
+  stats". (For the user's *own* history — it uses their signed-in YouTube
+  account.) Sets up
   Playwright's agent CLI as needed and reads the last ~30 days by driving a real
   browser with a dedicated profile the user signs into once (it never touches their
   main browser profile), then writes one stats-report.md covering the
@@ -25,13 +27,30 @@ conference talks, …), plus topics, channels, and watch-time estimates.
 
 The skill has two stages that are deliberately separate:
 
-1. **Scrape** — a Playwright script logs into YouTube via the user's existing
-   Chrome profile and dumps raw history to a JSON file.
+1. **Scrape** — a Playwright script drives a browser into the user's logged-in
+   YouTube (a dedicated profile they sign into once) and dumps raw history to a
+   JSON file.
 2. **Analyze** — you read that JSON and write `stats-report.md`.
 
 Keeping them separate means the user can re-run the analysis on already-scraped
 data without opening a browser again, and it keeps the slow/fragile browser work
 out of the part that needs judgment.
+
+## Get consent before you scrape
+
+The scrape stage reads the user's **private YouTube watch history** through their
+**logged-in Google/YouTube account** — authenticated personal data. Before
+opening any browser or running the scraper, tell the user plainly what will
+happen and get an explicit go-ahead. Something like:
+
+> "To do this I'll open a browser window, have you sign into YouTube once, and
+> read your watch-history page (video titles, channels, dates) for the last ~30
+> days. It stays on your machine — nothing is uploaded. OK to go ahead?"
+
+Wait for a clear yes before Stage 1. Never enter credentials or sign in on their
+behalf — the user does the login themselves in the window. If they only want
+analysis of data they already have (see below), you don't touch their account at
+all — skip the browser entirely.
 
 ## Before you start: do you even need to scrape?
 
@@ -287,7 +306,16 @@ stat is a horoscope. Pair them.
 
 ### Clean up
 
-Leave only `stats-report.md`. Delete the intermediate scrape/working files
-(`raw.json`, `history.json`, any title dumps) and close the browser session
-(`$PWCLI -s=yt close`). Keep the persistent profile dir (`yt-profile`) — that's
-what lets the next run skip the login.
+Close the browser session (`$PWCLI -s=yt close`). Then tidy up — but **don't
+delete the user's data silently**. Tell them what you're removing and leave the
+reusable bits:
+
+- Safe to remove without asking: throwaway scratch like `raw.json` / title dumps.
+- **Keep `history.json`** (or ask before deleting it) — it's the user's scraped
+  data, and the whole point of the two-stage split is that they can re-run the
+  analysis from it without scraping again. Mention it's there.
+- **Keep the persistent profile dir** (`yt-profile`) — that's what lets the next
+  run skip the login. (It holds their YouTube session cookies, so don't commit or
+  share it.)
+
+State briefly what you cleaned up so nothing disappears as a surprise.

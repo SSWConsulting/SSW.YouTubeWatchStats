@@ -6,21 +6,20 @@
 # main Chrome profile), so signing into YouTube once is remembered on later runs.
 set -euo pipefail
 
-# Resolve a working `playwright-cli` invocation. Prefer a global install, fall
-# back to `npx @playwright/cli@latest` (note: the bare `playwright-cli` npm
-# package is deprecated — the live one is `@playwright/cli`).
+# Resolve a working `playwright-cli` invocation WITHOUT mutating the user's
+# system. Prefer an existing global install if they already have one; otherwise
+# use `npx`, which fetches into npm's cache on demand (no global install).
+# (Note: the bare `playwright-cli` npm package is deprecated — the live one is
+# `@playwright/cli`.) We deliberately do NOT run `npm install -g` automatically;
+# a global install changes the user's environment and should be their choice.
 if command -v playwright-cli >/dev/null 2>&1; then
   PWCLI="playwright-cli"
 elif npx --no-install playwright-cli --version >/dev/null 2>&1; then
   PWCLI="npx playwright-cli"
 else
-  echo "Installing @playwright/cli (one-time)..."
-  npm install -g @playwright/cli@latest >/dev/null 2>&1 || true
-  if command -v playwright-cli >/dev/null 2>&1; then
-    PWCLI="playwright-cli"
-  else
-    PWCLI="npx -y @playwright/cli@latest"
-  fi
+  PWCLI="npx -y @playwright/cli@latest"
+  echo "Using on-demand via npx (no global install)."
+  echo "Optional one-time speed-up (your choice): npm install -g @playwright/cli@latest"
 fi
 echo "playwright-cli: $PWCLI ($($PWCLI --version 2>/dev/null | tail -1))"
 
